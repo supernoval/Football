@@ -14,6 +14,7 @@
 
 - (IBAction)buttonAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+- (IBAction)showResultAction:(id)sender;
 
 @end
 

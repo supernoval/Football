@@ -15,7 +15,7 @@
 		D2E840001C30C2A2004BF4CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E83FFE1C30C2A2004BF4CA /* LaunchScreen.storyboard */; };
 		D2E8400B1C30C2A2004BF4CA /* FootballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E8400A1C30C2A2004BF4CA /* FootballTests.m */; };
 		D2E840161C30C2A2004BF4CA /* FootballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E840151C30C2A2004BF4CA /* FootballUITests.m */; };
-		D2E840251C30C3F4004BF4CA /* 33.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2E840241C30C3F4004BF4CA /* 33.txt */; };
+		D2E8403F1C34DAEC004BF4CA /* 1.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2E8403A1C34DAEC004BF4CA /* 1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		D2E840111C30C2A2004BF4CA /* FootballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E840151C30C2A2004BF4CA /* FootballUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootballUITests.m; sourceTree = "<group>"; };
 		D2E840171C30C2A2004BF4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2E840241C30C3F4004BF4CA /* 33.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 33.txt; sourceTree = "<group>"; };
+		D2E8403A1C34DAEC004BF4CA /* 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 		D2E840231C30C3D4004BF4CA /* SourceFile */ = {
 			isa = PBXGroup;
 			children = (
-				D2E840241C30C3F4004BF4CA /* 33.txt */,
+				D2E8403A1C34DAEC004BF4CA /* 1.txt */,
 			);
 			name = SourceFile;
 			sourceTree = "<group>";
@@ -255,8 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2E840001C30C2A2004BF4CA /* LaunchScreen.storyboard in Resources */,
+				D2E8403F1C34DAEC004BF4CA /* 1.txt in Resources */,
 				D2E83FFD1C30C2A2004BF4CA /* Assets.xcassets in Resources */,
-				D2E840251C30C3F4004BF4CA /* 33.txt in Resources */,
 				D2E83FFB1C30C2A2004BF4CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +510,7 @@
 				D2E8401C1C30C2A2004BF4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2E8401D1C30C2A2004BF4CA /* Build configuration list for PBXNativeTarget "FootballTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +519,7 @@
 				D2E8401F1C30C2A2004BF4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2E840201C30C2A2004BF4CA /* Build configuration list for PBXNativeTarget "FootballUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +528,7 @@
 				D2E840221C30C2A2004BF4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

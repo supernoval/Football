@@ -12,6 +12,16 @@
     UITapGestureRecognizer *_tapResign;
 }
 @property (nonatomic, strong)NSMutableArray *dataArray;
+@property (nonatomic)CGFloat value_0;
+@property (nonatomic)CGFloat value_1;
+@property (nonatomic)CGFloat value_2;
+@property (nonatomic)CGFloat value_3;
+@property (nonatomic)CGFloat value_4;
+@property (nonatomic)CGFloat value_5;
+@property (nonatomic)CGFloat value_6;
+@property (nonatomic)CGFloat value_7;
+@property (nonatomic)CGFloat value_8;
+@property (nonatomic)CGFloat value_9;
 
 @end
 
@@ -43,7 +53,7 @@
 #pragma mark- 获取整体数据
 - (NSArray *)getTheResult{
     
-    NSString *schoolsPath = [[NSBundle mainBundle]pathForResource:@"33" ofType:@"txt"];
+    NSString *schoolsPath = [[NSBundle mainBundle]pathForResource:@"1" ofType:@"txt"];
     
     NSString *content = [[NSString alloc] initWithContentsOfFile:schoolsPath encoding:NSUTF8StringEncoding error:nil];
 //    NSLog(@"___:%@",content);
@@ -162,7 +172,7 @@
 
 
 #pragma mark- 数据整合得出结果
-- (NSString *)getLinearEquation:(NSMutableArray *)array{
+- (NSMutableArray *)getLinearEquation:(NSMutableArray *)array{
     if (array.count>0) {
         NSInteger num = array.count;//总个数
         CGFloat plus_xy = 0;
@@ -209,11 +219,15 @@
             
         }
         
+        NSMutableArray *resArray = [[NSMutableArray alloc]initWithCapacity:0];
+        [resArray addObject:@(y_)];
+        [resArray addObject:@(rr)];
         
         
-        return result;
+        
+        return resArray;
     }else{
-        return @"没有数据，请检查";
+        return nil;
     }
 }
 
@@ -233,10 +247,77 @@
         
         NSMutableArray *twoDim = [self generateTwoDimensionalData:oneArray];//生成二维散点
         
+        NSMutableArray *resArray = [[NSMutableArray alloc]init];
+        [resArray addObjectsFromArray:[self getLinearEquation:twoDim]];
         
-        NSString *oneResult = [NSString stringWithFormat:@"%li、%@",(long)i,[self getLinearEquation:twoDim]];//得到趋势线方程
+        NSString *oneResult = [NSString stringWithFormat:@"y_=%f  r^2=%f",[[resArray objectAtIndex:0]floatValue],[[resArray objectAtIndex:1]floatValue]];//得到趋势线方程均值方差
         NSString *one_res = [oneResult stringByAppendingString:@"\n\n"];
         result = [result stringByAppendingString:one_res];
+        
+        switch (i) {
+            case 0:
+            {
+                _value_0 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 1:
+            {
+                _value_1 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 2:
+            {
+                _value_2 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 3:
+            {
+                _value_3 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 4:
+            {
+                _value_4 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 5:
+            {
+                _value_5 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 6:
+            {
+                _value_6 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 7:
+            {
+                _value_7 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 8:
+            {
+                _value_8 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            case 9:
+            {
+                _value_9 = [[resArray objectAtIndex:0] floatValue];
+            }
+                break;
+                
+            default:
+                break;
+        }
     }
     
     _resultLabel.text = result;
@@ -277,4 +358,8 @@
     
 }
 
+- (IBAction)showResultAction:(id)sender {
+    
+    _resultLabel.text = [NSString stringWithFormat:@"%f  %f  %f\n\n%f  %f  %f\n\n%f  %f  %f",_value_7,_value_8,_value_9,_value_0*_value_3,_value_1*_value_4,_value_2*_value_5,(_value_7-_value_0*_value_3)/(_value_0*_value_3),(_value_8-_value_1*_value_4)/(_value_1*_value_4),(_value_9-_value_2*_value_5)/(_value_2*_value_5)];
+}
 @end
